@@ -1,4 +1,4 @@
-# DSC232R Data Exploration
+# DSC232R Group Project: Data Exploration
 
 ## Dataset
 
