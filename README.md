@@ -6,7 +6,7 @@
 
 Our dataset is the **Smart Bee Colony Monitor: Clips of Beehive Sounds** dataset from Kaggle by Anna Yang. It consists of beehive audio recordings and related hive data collected from European honey bee hives in California under varying environmental and biological conditions, such as hive temperature and humidity.
 
-The dataset is **23.21 GB**, which is above the **10 GB minimum** requirement.
+The dataset is **23.21 GB**.
 
 ## Project Goal
 
