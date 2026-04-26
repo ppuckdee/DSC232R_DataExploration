@@ -34,13 +34,11 @@ We used SDSC Expanse with JupyterLab for this project.
 - Singularity image: `~/esolares/singularity_images/spark_py_latest_jupyter_dsc232r.sif`
 - Module: `singularitypro`
 
+## SDSC Expanse Setup
+
+We used SDSC Expanse JupyterLab with 8 cores and 128GB memory per node.
+
 ### SparkSession Configuration
-
-We used the required formula:
-
-- Executor instances = Total Cores - 1 = 8 - 1 = 7
-- Executor memory = (Total Memory - Driver Memory) / Executor Instances
-- Executor memory = (128GB - 2GB) / 7 = 18GB
 
 ```python
 from pyspark.sql import SparkSession
