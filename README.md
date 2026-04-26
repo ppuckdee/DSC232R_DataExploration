@@ -20,3 +20,34 @@ This project would be difficult to complete on a laptop because the dataset is v
 - **Snigdha Tiwari** — sntiwari@ucsd.edu
 - **Patcharapol Puckdee** — ppuckdee@ucsd.edu
 - **Conner Houghtby** — choughtby@ucsd.edu
+
+## SDSC Expanse Setup
+
+We used SDSC Expanse with JupyterLab for this project.
+
+- Account: TG-SEE260003
+- Partition: shared
+- Time limit: 120 minutes
+- Cores: 8
+- Memory per node: 128GB
+- GPUs: 0
+- Singularity image: `~/esolares/singularity_images/spark_py_latest_jupyter_dsc232r.sif`
+- Module: `singularitypro`
+
+### SparkSession Configuration
+
+We used the required formula:
+
+- Executor instances = Total Cores - 1 = 8 - 1 = 7
+- Executor memory = (Total Memory - Driver Memory) / Executor Instances
+- Executor memory = (128GB - 2GB) / 7 = 18GB
+
+```python
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .config("spark.driver.memory", "2g") \
+    .config("spark.executor.memory", "18g") \
+    .config("spark.executor.instances", 7) \
+    .config("spark.executor.cores", 1) \
+    .getOrCreate()
