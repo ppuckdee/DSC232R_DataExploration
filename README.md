@@ -39,3 +39,7 @@ spark = SparkSession.builder \
     .config("spark.executor.instances", 7) \
     .config("spark.executor.cores", 1) \
     .getOrCreate()
+
+### Spark UI Screenshot
+
+Placeholder: Insert Spark UI screenshot here.
