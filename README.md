@@ -1,4 +1,4 @@
-# DSC232R Group Project: Data Exploration
+# DSC232R Group Project: Beehive Sound Data Exploration and Health Monitoring
 
 ## Dataset
 
