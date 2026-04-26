@@ -4,15 +4,15 @@
 
 **Dataset link:** [Smart Bee Colony Monitor: Clips of Beehive Sounds](https://www.kaggle.com/datasets/annajyang/beehive-sounds)
 
-Our dataset is the **Smart Bee Colony Monitor: Clips of Beehive Sounds** dataset from Kaggle by Anna Yang. It consists of beehive audio recordings and related hive data collected from European honey bee hives in California under varying environmental and biological conditions, such as hive temperature and humidity.
+We are using the **Smart Bee Colony Monitor: Clips of Beehive Sounds** dataset from Kaggle. It contains beehive audio recordings and hive information such as temperature and humidity.
 
 The dataset is **23.21 GB**.
 
 ## Project Goal
 
-Our objective is to develop a hive health monitoring system that classifies the overall condition of bee colonies based on audio patterns.
+Our goal is to use beehive sound data to classify the health condition of bee colonies.
 
-This project would be difficult to complete on a laptop because the dataset is very large and contains thousands of audio files that must be processed and analyzed. Distributed processing is needed because it allows the workload to be split across multiple computers, making the analysis faster and easier to manage.
+This dataset is too large to process easily on a laptop because it contains many audio files. We are using distributed processing so the work can be split across multiple executors and processed more efficiently.
 
 ## Project Members
 
@@ -23,7 +23,10 @@ This project would be difficult to complete on a laptop because the dataset is v
 
 ## SDSC Expanse Setup
 
-We used SDSC Expanse JupyterLab with 8 cores and 128GB memory per node.
+We used SDSC Expanse JupyterLab with:
+
+- 8 cores
+- 128GB memory per node
 
 ### SparkSession Configuration
 
