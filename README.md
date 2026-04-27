@@ -44,3 +44,9 @@ spark = SparkSession.builder \
 ### Spark UI Screenshot
 
 Placeholder: Insert Spark UI screenshot here.
+
+
+
+
+### Preprocessing Plan
+1A. Since the column `gust_speed` has 994 nulls (approx 78% of the dataset), we will drop this column. There is not enough data to compute anything meaningful. Additionally, `weather temp`, `wind speed`, `lat`, `long` have nulls but only 4 each. Thus, this can be computed to get meaningful conclusions but will need to be computed with the mean. 
