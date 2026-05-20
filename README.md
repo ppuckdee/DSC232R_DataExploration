@@ -72,7 +72,7 @@ Placeholder: Insert Spark UI screenshot here.
 ### Preprocessing Plan
 1A. Since the column `gust_speed` has 994 nulls (approx 78% of the dataset), we will drop this column. There is not enough data to compute anything meaningful. Additionally, `weather temp`, `wind speed`, `lat`, `long` have nulls but only 4 each. Thus, this can be computed to get meaningful conclusions but will need to be computed with the mean. 
 
-**First model: Decision Tree Classifier**
+### First model: Decision Tree Classifier**
 - 80/20 random train/test split (seed=42).
 - Baseline `DecisionTreeClassifier` at `maxDepth=5`, using `weightCol="weight"`
   so the minority classes aren't ignored.
@@ -87,3 +87,8 @@ Placeholder: Insert Spark UI screenshot here.
 The model fits cleanly: at modest depth the train and test curves track
 each other within ~3–4%, and as depth grows the training error collapses
 to zero 
+
+### Improvements
+
+**Drop identity/time features** (device, hive number, hour/month/day_of_week) to force the tree onto acoustic + sensor
+  signal instead of hive-identity memorization.
