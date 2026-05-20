@@ -67,7 +67,23 @@ We chose 16 cores and 32GB because:
 Placeholder: Insert Spark UI screenshot here.
 
 
-
+## Milestone 3
 
 ### Preprocessing Plan
 1A. Since the column `gust_speed` has 994 nulls (approx 78% of the dataset), we will drop this column. There is not enough data to compute anything meaningful. Additionally, `weather temp`, `wind speed`, `lat`, `long` have nulls but only 4 each. Thus, this can be computed to get meaningful conclusions but will need to be computed with the mean. 
+
+**First model: Decision Tree Classifier**
+- 80/20 random train/test split (seed=42).
+- Baseline `DecisionTreeClassifier` at `maxDepth=5`, using `weightCol="weight"`
+  so the minority classes aren't ignored.
+- Train vs. test reported as accuracy, weighted F1, and error rate, with a
+  confusion matrix on the test set.
+- Depth sweep over `maxDepth ∈ {1, 2, 3, 5, 7, 10, 15}` tracking how
+  training and test error diverge — the bias-variance fitting curve.
+- Final summary at the depth that minimizes test error.
+
+### Conclusion
+
+The model fits cleanly: at modest depth the train and test curves track
+each other within ~3–4%, and as depth grows the training error collapses
+to zero 
