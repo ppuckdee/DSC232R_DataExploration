@@ -72,7 +72,7 @@ Placeholder: Insert Spark UI screenshot here.
 ### Preprocessing Plan
 1A. Since the column `gust_speed` has 994 nulls (approx 78% of the dataset), we will drop this column. There is not enough data to compute anything meaningful. Additionally, `weather temp`, `wind speed`, `lat`, `long` have nulls but only 4 each. Thus, this can be computed to get meaningful conclusions but will need to be computed with the mean. 
 
-### First model: Decision Tree Classifier**
+### First model: Decision Tree Classifier
 - 80/20 random train/test split (seed=42).
 - Baseline `DecisionTreeClassifier` at `maxDepth=5`, using `weightCol="weight"`
   so the minority classes aren't ignored.
@@ -95,3 +95,8 @@ to zero
 
 ### Links
 [Preprocessing Notebook](https://github.com/ppuckdee/DSC232R-Beehive-Sound-Health-Monitoring/blob/e6241450506ab78798067f76d5b6e392b261070b/preprocess_milestone_three.ipynb)
+
+## Milestone 4
+
+### Second Model: PCA + Logistic Regression
+...
