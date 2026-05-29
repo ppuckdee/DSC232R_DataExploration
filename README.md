@@ -92,7 +92,8 @@ to zero
 
 **Drop identity/time features** (device, hive number, hour/month/day_of_week) to force the tree onto acoustic + sensor
   signal instead of hive-identity memorization.
-
+### Second Model 
+[PCA Notebook](PCA.ipynb)
 ### Links
 [Preprocessing Notebook](https://github.com/ppuckdee/DSC232R-Beehive-Sound-Health-Monitoring/blob/e6241450506ab78798067f76d5b6e392b261070b/preprocess_milestone_three.ipynb)
 
