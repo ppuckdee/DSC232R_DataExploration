@@ -113,9 +113,7 @@ We also looked at prediction results from the test set, including **correct clas
 
 ### Fitting Analysis
 
-This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features and Logistic Regression is a simpler classifier.
-
-The model fits closer to the **underfitting-to-balanced** part of the fitting graph. If the training and test scores are close, then the model is not overfitting much. If both scores are low, then PCA may have removed too much useful information.
+This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features before Logistic Regression. This means it is less likely to overfit, but it could underfit if too much useful information was removed.
 
 ### Conclusion
 
@@ -129,7 +127,6 @@ However, PCA does not know which features are most useful for the health labels,
 
 **Compare PCA results to the full feature set** to see whether dimensionality reduction helped or hurt performance.
 
-**Try other models** such as Random Forest, Gradient-Boosted Trees, or K-Means on the PCA features.
 
 ### Speedup Analysis
 
