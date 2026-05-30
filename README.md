@@ -100,6 +100,43 @@ to zero
 ## Milestone 4
 
 ### Second Model: PCA + Logistic Regression
+
+For our second model, we used **PCA** for dimensionality reduction followed by **Logistic Regression** for classification.
+
+PCA was used to shrink the feature set while keeping as much important information as possible. This is helpful because our dataset has many audio, hive, time, and environmental features. After reducing the features with PCA, we trained Logistic Regression to predict bee colony health.
+
+### Evaluation
+
+We evaluated the model using **training accuracy**, **test accuracy**, **weighted F1 score**, and **PCA explained variance**.
+
+We also looked at prediction results from the test set, including **correct classifications**, **false positives**, and **false negatives**.
+
+### Fitting Analysis
+
+This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features and Logistic Regression is a simpler classifier.
+
+The model fits closer to the **underfitting-to-balanced** part of the fitting graph. If the training and test scores are close, then the model is not overfitting much. If both scores are low, then PCA may have removed too much useful information.
+
+### Conclusion
+
+The PCA + Logistic Regression model shows that dimensionality reduction can make the dataset smaller while still allowing us to classify bee colony health.
+
+However, PCA does not know which features are most useful for the health labels, so it may remove some important information. To improve this model, we could test more PCA component values and try other classifiers after PCA.
+
+### Improvements
+
+**Try different PCA component values** to find the best balance between reducing features and keeping accuracy.
+
+**Compare PCA results to the full feature set** to see whether dimensionality reduction helped or hurt performance.
+
+**Try other models** such as Random Forest, Gradient-Boosted Trees, or K-Means on the PCA features.
+
+### Speedup Analysis
+
+Since the dataset is **23.21 GB**, we used Spark on SDSC Expanse to split the work across multiple cores. This made the large audio dataset easier to process than running everything on a laptop.
+
+### Links
+
 [PCA Notebook](PCA.ipynb)
 
 
