@@ -107,9 +107,9 @@ PCA was used to shrink the feature set while keeping as much important informati
 
 ### Evaluation
 
-We evaluated the model using **training accuracy**, **test accuracy**, **weighted F1 score**, and **PCA explained variance**.
+We evaluated the model using **training accuracy**, **test accuracy**, **F1 score**, and **PCA explained variance**.
 
-We also looked at prediction results from the test set, including **correct classifications**, **false positives**, and **false negatives**.
+The PCA notebook also compares training and test performance across different numbers of PCA components.
 
 ### Fitting Analysis
 
