@@ -123,7 +123,32 @@ To improve this model, we could test different numbers of PCA components and com
 
 ### Speedup Analysis
 
-Since the dataset is **23.21 GB**, we used Spark on SDSC Expanse to split the work across multiple cores. This made the large audio dataset easier to process than running everything on a laptop.
+We measured the performance of our feature engineering pipeline (data loading → preprocessing → aggregation) across different executor configurations.
+
+### Methodology
+- Dataset: 23.21GB Parquet files
+- Operation: Full preprocessing pipeline
+- Each measurement: Average of 3 runs
+
+### Results
+
+| Executors | Memory/Exec | Time (sec) | Speedup | Efficiency |
+|-----------|-------------|------------|---------|------------|
+| 1         | 64GB        | 0.8        | 1.00x   | 100%       |
+| 3         | 20GB        | 0.77       | 1.03x   | 34%        |
+| 7         | 14GB        | 0.78       | 1.03x   | 15%        |
+
+### Analysis
+
+Using the formula p = n(S-1) / S(n-1):
+- With 7 executors: p = 7(1.03-1) / 1.03(6) = 0.034 (3.4% parallelizable)
+
+Efficiency drops to 15% at 7 executors, indicating:
+1. Shuffle overhead becomes significant
+2. Memory per executor (14GB) may be insufficient
+3. Amdahl's Law limits with ~5% sequential code
+
+**Recommendation**: 2 executors will likely provide best balance of speedup and efficiency for our workload since the dropoff in efficiency between 1 and 3 executors is 66%.
 
 ### Links
 
