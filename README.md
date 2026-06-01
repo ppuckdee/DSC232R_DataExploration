@@ -113,6 +113,8 @@ The PCA notebook also compares training and test performance across different nu
 
 #### PCA Explained Variance
 
+This graph shows how much information PCA keeps as more components are added.
+
 <img width="889" height="490" alt="PCA explained variance plot" src="https://github.com/user-attachments/assets/5b63a35a-0f0d-43a4-95ac-a65629215365" />
 
 ### Fitting Analysis
@@ -133,10 +135,6 @@ To improve this model, we could test different numbers of PCA components and com
 
 We measured the performance of our feature engineering pipeline (data loading → preprocessing → aggregation) across different executor configurations.
 
-#### Strong Scaling Analysis
-
-<img width="1289" height="495" alt="image" src="https://github.com/user-attachments/assets/3038a522-c872-4317-a846-5e178693c632" />
-
 
 ### Methodology
 - Dataset: 23.21GB Parquet files
@@ -150,6 +148,12 @@ We measured the performance of our feature engineering pipeline (data loading �
 | 1         | 64GB        | 0.8        | 1.00x   | 100%       |
 | 3         | 20GB        | 0.77       | 1.03x   | 34%        |
 | 7         | 14GB        | 0.78       | 1.03x   | 15%        |
+
+#### Strong Scaling Analysis
+
+This graph shows that adding more executors did not improve speed much.
+
+<img width="1289" height="495" alt="image" src="https://github.com/user-attachments/assets/3038a522-c872-4317-a846-5e178693c632" />
 
 ### Analysis
 
