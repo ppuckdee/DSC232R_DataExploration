@@ -111,6 +111,10 @@ We evaluated the model using **training accuracy**, **test accuracy**, **F1 scor
 
 The PCA notebook also compares training and test performance across different numbers of PCA components.
 
+#### PCA Explained Variance
+
+<img width="889" height="490" alt="PCA explained variance plot" src="https://github.com/user-attachments/assets/5b63a35a-0f0d-43a4-95ac-a65629215365" />
+
 ### Fitting Analysis
 
 This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features before Logistic Regression. This means it is less likely to overfit, but it could underfit if too much useful information was removed.
