@@ -111,6 +111,12 @@ We evaluated the model using **training accuracy**, **test accuracy**, **F1 scor
 
 The PCA notebook also compares training and test performance across different numbers of PCA components.
 
+#### Model 2 Metrics
+
+This table shows the training and test scores for the PCA + Logistic Regression model.
+
+<img width="470" height="74" alt="model2metrics" src="https://github.com/user-attachments/assets/f3f7a8ef-6551-4fa7-8c53-d6da8bb1f0fb" />
+
 #### PCA Explained Variance
 
 This graph shows how much information PCA keeps as more components are added.
@@ -122,6 +128,8 @@ This graph shows how much information PCA keeps as more components are added.
 This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features before Logistic Regression. This means it is less likely to overfit, but it could underfit if too much useful information was removed.
 
 #### Training vs. Test Error
+
+This graph shows how the model error changes as we use more PCA components.
 
 <img width="790" height="490" alt="PCA Logistic Regression training vs test error graph" src="https://github.com/user-attachments/assets/c52720b8-d80a-4e50-8a39-f68ce3cb73f4" />
 
