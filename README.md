@@ -123,7 +123,7 @@ This model is simpler than the Decision Tree from Milestone 3 because PCA reduce
 
 #### Training vs. Test Error
 
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/c52720b8-d80a-4e50-8a39-f68ce3cb73f4" />
+<img width="790" height="490" alt="PCA Logistic Regression training vs test error graph" src="https://github.com/user-attachments/assets/c52720b8-d80a-4e50-8a39-f68ce3cb73f4" />
 
 ### Conclusion
 
@@ -153,7 +153,7 @@ We measured the performance of our feature engineering pipeline (data loading â†
 
 This graph shows that adding more executors did not improve speed much.
 
-<img width="1289" height="495" alt="image" src="https://github.com/user-attachments/assets/3038a522-c872-4317-a846-5e178693c632" />
+<img width="1289" height="495" alt="strong scaling analysis graph" src="https://github.com/user-attachments/assets/3038a522-c872-4317-a846-5e178693c632" />
 
 ### Analysis
 
