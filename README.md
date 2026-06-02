@@ -282,6 +282,13 @@ Our goal was to classify beehive health from audio and sensor data using distrib
 - Measuring speedup specifically on the audio UDF step, where parallelism is expected to make a real difference
 
 ---
+## Statement of Collaboration
+
+- Snigdha Tiwari: Contributor: Did data exploration, preprocessing, final repo cleanup, extra credit
+- Adham Kamel: Title: Contribution
+- Patcharapol Puckdee: Title: Contribution
+- Conner Houghtby: Title: Contribution
+---
 
 ## Notebooks
 
@@ -298,9 +305,11 @@ Our goal was to classify beehive health from audio and sensor data using distrib
 Spark was faster for this task. The beehive CSV sits on Expanse's Lustre filesystem, and `describe()` + `percentile_approx` are single-pass aggregations that Spark handles efficiently in one call. Ray reads the CSV sequentially before distributing the work, so the overhead ends up outweighing any parallelism benefit at this dataset size. Spark averaged 1.01s vs Ray's 142.94s.
 
 **Which was easier to implement?**
+
 Spark was easier to implement. `df.describe()` and `percentile_approx` produce a clean summary in one call. Ray Data doesn't have a built-in percentile aggregator, so we had to convert to pandas to compute quantiles, which added an extra step and made the code more complicated.
 
 **Which would we choose for this use case?**
+
 We would choose Spark for tabular statistics and preprocessing. Ray would be the better choice if the pipeline included the audio feature extraction UDF at scale or model training with PyTorch, since Ray's integrations (Ray Train, Ray Tune) give it a clear advantage over Spark's MLlib for those kinds of tasks.
 
 ---
