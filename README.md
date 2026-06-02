@@ -300,7 +300,7 @@ Our goal was to classify beehive health from audio and sensor data using distrib
 | [PCA + Logistic Regression (Model 2)](model2_pca_logistic_regression.ipynb) | Dimensionality reduction, model training, evaluation, fitting curve, speedup analysis |
 | [Extra Credit: Spark vs Ray](extra_credit.ipynb) | Framework comparison on statistical aggregation tasks |
 
-### Extra Credit: Spark vs. Ray Framework Comparison
+## Extra Credit
 
 **Which framework was faster?**
 Spark was faster for this task. The beehive CSV sits on Expanse's Lustre filesystem, and `describe()` + `percentile_approx` are single-pass aggregations that Spark handles efficiently in one call. Ray reads the CSV sequentially before distributing the work, so the overhead ends up outweighing any parallelism benefit at this dataset size. Spark averaged 1.01s vs Ray's 142.94s.
