@@ -318,6 +318,6 @@ We would choose Spark for tabular statistics and preprocessing. Ray would be the
 ## Statement of Collaboration
 
 - Snigdha Tiwari: Contributor: Did data exploration, preprocessing, final repo cleanup, extra credit
-- Adham Kamel: Title: Contribution
+- Adham Kamel: Contributor: Did the data visualization, training of the first DecisionTree model, as well as the speedup analysis for the PCA model
 - Patcharapol Puckdee: Title: Contributed to documentation, including the README and write-up, and supported team collaboration through feedback and communication.
 - Conner Houghtby: Title: Contribution
