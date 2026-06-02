@@ -283,13 +283,6 @@ Our goal was to classify beehive health from audio and sensor data using distrib
 - Measuring speedup specifically on the audio UDF step, where parallelism is expected to make a real difference
 
 ---
-## Statement of Collaboration
-
-- Snigdha Tiwari: Contributor: Did data exploration, preprocessing, final repo cleanup, extra credit
-- Adham Kamel: Title: Contribution
-- Patcharapol Puckdee: Title: Contribution
-- Conner Houghtby: Title: Contribution
----
 
 ## Notebooks
 
