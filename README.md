@@ -319,5 +319,5 @@ We would choose Spark for tabular statistics and preprocessing. Ray would be the
 
 - Snigdha Tiwari: Contributor: Did data exploration, preprocessing, final repo cleanup, extra credit
 - Adham Kamel: Title: Contribution
-- Patcharapol Puckdee: Title: Contribution
+- Patcharapol Puckdee: Title: Contributed to documentation, including the README and write-up, and supported team collaboration through feedback and communication.
 - Conner Houghtby: Title: Contribution
