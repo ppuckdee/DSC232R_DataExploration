@@ -10,8 +10,9 @@
 7. [Figures](#figures)
 8. [Discussion](#discussion)
 9. [Conclusion](#conclusion)
-10. [Notebooks](#notebooks)
-
+10. [Statement of Collaboration](#statement-of-collaboration)
+11. [Notebooks](#notebooks)
+12. [Extra Credit](#extra-credit)
 ---
 
 ## Introduction
